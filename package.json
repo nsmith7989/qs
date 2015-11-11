@@ -7,7 +7,7 @@
     "type": "git",
     "url": "https://github.com/hapijs/qs.git"
   },
-  "main": "dist/index.js",
+  "main": "lib/index.js",
   "keywords": [
     "querystring",
     "qs"
@@ -27,5 +27,8 @@
     "test-cov-html": "lab -a code -r html -o coverage.html",
     "dist": "browserify --standalone Qs lib/index.js > dist/qs.js"
   },
-  "license": "BSD-3-Clause"
+  "license": "BSD-3-Clause",
+  "browserify": {
+    "transform": ["babelify"]
+  }
 }
